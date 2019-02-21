@@ -1,0 +1,32 @@
+Vagrant.configure("2") do |config|
+	config.vm.box = "bento/centos-7.2"
+	config.vm.box_check_update = false
+ 
+	config.vm.provider "virtualbox" do |vb|
+		vb.gui = false
+		vb.memory = "512"
+	end
+
+
+	config.vm.define "vm21" do |vm21|
+		vm21.vm.hostname = "vm21"
+		vm21.vm.network "private_network", ip: "192.168.33.111"
+		vm21.vm.provision "shell", inline: <<-SHELL
+			yum install git -y
+			mkdir -p /git/EPAM
+			git clone https://github.com/y6vmeq/EPAM.git /git/EPAM
+			cd /git/EPAM
+			git checkout task2
+			cat /git/EPAM/Module2/Module2.txt
+			echo -e "192.168.33.112 vm22\n192.168.33.111 vm21\n127.0.0.1 vm21\n127.0.0.1 localhost" > /etc/hosts
+		SHELL
+	end
+
+	config.vm.define "vm22" do |vm22|
+		vm22.vm.hostname = "vm22"
+		vm22.vm.network "private_network", ip: "192.168.33.112"
+		vm22.vm.provision "shell", inline: <<-SHELL
+			echo -e "192.168.33.112 vm22\n192.168.33.111 vm21\n127.0.0.1 vm22\n127.0.0.1 localhost" > /etc/hosts
+		SHELL
+	end
+end

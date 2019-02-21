@@ -1,0 +1,39 @@
+Vagrant.configure("2") do |config|
+	config.vm.box = "bento/centos-7.2"
+	config.vm.box_check_update = false
+ 
+	config.vm.provider "virtualbox" do |vb|
+		vb.gui = false
+		vb.memory = "512"
+	end
+
+	config.vm.define "server1" do |sr1|
+		sr1.vm.hostname = "server1"
+		sr1.vm.network "private_network", ip: "192.168.33.111"
+		sr1.vm.provision "shell", privileged: false, inline: <<-SHELL 
+			echo -e "Host *\n    StrictHostKeyChecking no\n" > ~/.ssh/config
+			sudo chmod 600 ~/.ssh/config	
+			echo -e "192.168.33.112 server2\n192.168.33.111 server1\n127.0.0.1 server1\n127.0.0.1 localhost" | sudo tee -a /etc/hosts > /dev/null
+			sudo echo -e 'y\n'|ssh-keygen -q -N "" -f ~/.ssh/id_rsa
+			mkdir /vagrant/keys
+			cat ~/.ssh/id_rsa.pub > /vagrant/keys/id_rsa_serv1.pub
+		SHELL
+	end
+	
+	config.vm.define "server2" do |sr2|
+		sr2.vm.hostname = "server2"
+		sr2.vm.network "private_network", ip: "192.168.33.112"
+		sr2.vm.provision "shell", privileged: false, inline: <<-SHELL
+			echo -e "Host *\n    StrictHostKeyChecking no\n" > ~/.ssh/config
+			sudo chmod 600 ~/.ssh/config
+			echo -e "192.168.33.112 server2\n192.168.33.111 server1\n127.0.0.1 server2\n127.0.0.1 localhost" | sudo tee -a /etc/hosts > /dev/null
+			sudo echo -e 'y\n'|ssh-keygen -q -N "" -f ~/.ssh/id_rsa
+			cat ~/.ssh/id_rsa.pub > /vagrant/keys/id_rsa_serv2.pub
+			cat /vagrant/.vagrant/machines/server1/virtualbox/private_key > ~/.ssh/id_rsa2
+			sudo chmod 600 ~/.ssh/id_rsa2
+			cat /vagrant/keys/id_rsa_serv1.pub | sudo tee -a ~/.ssh/authorized_keys > /dev/null
+			ssh -i ~/.ssh/id_rsa2 vagrant@server1 "cat /vagrant/keys/id_rsa_serv2.pub | sudo tee -a ~/.ssh/authorized_keys > /dev/null"
+			rm -rf /vagrant/keys
+		SHELL
+	end
+end
