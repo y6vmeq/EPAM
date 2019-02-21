@@ -1,0 +1,33 @@
+apply plugin: 'war'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'log4j', name: 'log4j', version: '1.2.17'
+	compile group: 'commons-io', name: 'commons-io', version: '2.4'
+}
+
+task inc {
+	doLast {
+		def gradle_properties = new File('gradle.properties')
+		def line=gradle_properties.getText().find(version_app)
+		String ver=line.substring(0,line.length()-1)
+		String patch=line.substring(line.lastIndexOf('.')+1)
+		int non_ver=patch.toInteger()
+		int inc_ver=patch.toInteger()+1
+		String nline=gradle_properties.getText().replaceFirst("version_app="+ver+non_ver,"version_app="+ver+inc_ver)
+		gradle_properties.setText(nline)
+    }
+}
+
+task aupdate_greeting{
+	doLast {
+		def greeting_file = new File('build/resources/main/greeting.txt')
+		greeting_file.append("\n" + version_app)
+	}
+}
+
+war.dependsOn aupdate_greeting
+aupdate_greeting.mustRunAfter classes
