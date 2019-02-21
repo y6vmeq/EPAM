@@ -1,0 +1,1 @@
+net use L: \\192.168.33.101\git \persistent:yes
