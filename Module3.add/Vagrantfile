@@ -1,0 +1,62 @@
+Vagrant.configure("2") do |config|
+	config.vm.box = "bento/centos-7.2"
+	config.vm.box_check_update = false
+ 
+	$tomcat_count = 3
+	$worker_lb_balance_workers = "worker.lb.balance_workers=tc1"
+	
+	(2..$tomcat_count).each do |i|
+		$worker_lb_balance_workers += ", tc#{i}"
+	end
+ 
+	config.vm.provider "virtualbox" do |vb|
+		vb.gui = false
+		vb.memory = "512"
+	end
+	
+	config.vm.define "httpd" do |httpd|
+		httpd.vm.hostname = "httpd"
+		httpd.vm.network "forwarded_port", guest: 80, host: 8090
+		httpd.vm.network "private_network", ip: "192.168.33.110"
+		httpd.vm.provision "shell", inline: <<-SHELL
+			yum install httpd -y
+			cp /vagrant/mod_jk.so /etc/httpd/modules/
+			cat <<-EOT >> /etc/httpd/conf/workers.properties
+worker.list=lb
+worker.lb.type=lb
+#$worker_lb_balance_workers
+			EOT
+			for (( count=1; count<=#$tomcat_count; count++ ))
+				do
+					echo -e "worker.tc$count.host=192.168.33.11$count" >> /etc/httpd/conf/workers.properties 
+					echo -e "worker.tc$count.port=8009" >> /etc/httpd/conf/workers.properties
+					echo -e "worker.tc$count.type=ajp13" >> /etc/httpd/conf/workers.properties
+					echo -e "worker.tc$count.lbfactor=$count" >> /etc/httpd/conf/workers.properties
+				done
+			cat <<-EOT >> /etc/httpd/conf.d/mod_jk.conf 
+LoadModule jk_module modules/mod_jk.so
+JkWorkersFile conf/workers.properties
+JkShmFile /tmp/shm
+JkLogFile logs/mod_jk.log
+JkLogLevel info
+JkMount /tc* lb
+			EOT
+			systemctl start httpd
+			systemctl enable httpd
+		SHELL
+	end
+	
+	(1..$tomcat_count).each do |i|
+		config.vm.define "tc#{i}" do |tc|
+			tc.vm.hostname = "tc#{i}"
+			tc.vm.network "private_network", ip: "192.168.33.11#{i}"
+			tc.vm.provision "shell", inline: <<-SHELL
+				yum install java-1.8.0-openjdk tomcat tomcat-webapps tomcat-admin-webapps -y
+				systemctl enable tomcat
+				systemctl start tomcat
+				mkdir /usr/share/tomcat/webapps/tc
+				echo -e "WE ARE ON TOMCAT SERVER ##{i}" > /usr/share/tomcat/webapps/tc/index.html  
+			SHELL
+		end
+	end
+ end
