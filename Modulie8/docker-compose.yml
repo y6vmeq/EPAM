@@ -1,0 +1,22 @@
+version: '3'
+services:
+  filebeat:
+    build:
+      ./fil
+  elasticsearch:
+    image: elasticsearch:6.6.1
+    ports:
+      - 9200:9200
+      - 9300:9300
+  kibana:
+    image: kibana:6.6.1
+    ports:
+      - 5601:5601
+  logstash:
+    image: logstash:6.6.1
+    ports:
+      - 5044:5044
+    volumes:
+      - ./log/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    depends_on:
+      - elasticsearch
