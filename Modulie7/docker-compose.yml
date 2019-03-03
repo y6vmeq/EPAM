@@ -1,0 +1,25 @@
+version: '3'
+services:
+  col2:
+    build:
+      ./col2
+  col1:
+    build:
+      ./col1
+  idb:
+    image: influxdb
+    environment:
+      INFLUXDB_DB: collectd
+    ports:
+      - 25826:25826
+      - 8083:8083
+      - 8086:8086
+      - 8090:8090
+    volumes:
+      - ./idb/types.db:/usr/share/collectd/types.db
+      - ./idb/influxdb.conf:/etc/influxdb/influxdb.conf
+  gra:
+    build:
+      ./gra
+    ports:
+      - 3000:3000
