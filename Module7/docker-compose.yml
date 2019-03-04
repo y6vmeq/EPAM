@@ -1,12 +1,12 @@
 version: '3'
 services:
-  col2:
+  collectd2:
     build:
       ./col2
-  col1:
+  collectd1:
     build:
       ./col1
-  idb:
+  influx:
     image: influxdb
     environment:
       INFLUXDB_DB: collectd
@@ -18,7 +18,7 @@ services:
     volumes:
       - ./idb/types.db:/usr/share/collectd/types.db
       - ./idb/influxdb.conf:/etc/influxdb/influxdb.conf
-  gra:
+  grafana:
     build:
       ./gra
     ports:
