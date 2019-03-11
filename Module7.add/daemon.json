@@ -1,0 +1,10 @@
+{
+  "registry-mirrors": [
+  "http://localhost:5000"
+  ],
+  "insecure-registries": [
+    "localhost:5000"
+  ],
+  "debug": true,
+  "experimental": false
+}

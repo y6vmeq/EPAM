@@ -1,0 +1,52 @@
+def ver = ''
+def name = ''
+node {
+	stage('1Get_Build_Upload') {
+		git branch: 'task6', url: 'https://github.com/y6vmeq/EPAM.git'
+		sh "git config --global user.email 'y6vmeq@gmail.com'"
+		sh "git config --global user.name 'y6vmeq'"
+		sh "chmod -R 777 ${env.WORKSPACE}/Module6"
+		dir ('Module6') {sh "./gradlew inc"}
+		dir ('Module6') {sh "./gradlew clean build"}
+		def gradle_properties = readFile 'Module6/gradle.properties'
+		def settings_gradle = readFile 'Module6/settings.gradle'
+		name=settings_gradle.substring(18,settings_gradle.length()-1)
+		ver=gradle_properties.substring(12,gradle_properties.length())
+		withCredentials([usernamePassword(credentialsId: 'nexus', passwordVariable: 'PASS', usernameVariable: 'NAME')]) {
+			sh "curl -v -u ${NAME}:${PASS} --upload-file 'Module6/build/libs/${name}.war' 'http://localhost:8081/nexus/content/repositories/snapshots/task6/${ver}/'"
+		}
+	}
+}
+node ('tc1') {
+	stage('1tc') {
+		sh "sudo wget -P /usr/share/tomcat/apps 192.168.33.110:8081/nexus/service/local/repositories/snapshots/content/task6/${ver}/${name}.war"
+		sh "wget -qO- 'http://192.168.33.110:80/jkmanager?cmd=update&from=list&w=lb&sw=tc1&vwa=1'"
+		sh "sudo mv -f /usr/share/tomcat/apps/${name}.war /usr/share/tomcat/webapps/${name}.war"
+		sleep 10
+		httpRequest consoleLogResponseBody: true, responseHandle: 'NONE', url: "http://localhost:8080/${name}/", validResponseContent: "${ver}"
+		sh "wget -qO- 'http://192.168.33.110:80/jkmanager?cmd=update&from=list&w=lb&sw=tc1&vwa=0'"
+	}
+}
+node ('tc2') {
+	stage('2tc') {
+		sh "sudo wget -P /usr/share/tomcat/apps 192.168.33.110:8081/nexus/service/local/repositories/snapshots/content/task6/${ver}/${name}.war"
+		sh "wget -qO- 'http://192.168.33.110:80/jkmanager?cmd=update&from=list&w=lb&sw=tc2&vwa=1'"
+		sh "sudo mv -f /usr/share/tomcat/apps/${name}.war /usr/share/tomcat/webapps/${name}.war"
+		sleep 10
+		httpRequest consoleLogResponseBody: true, responseHandle: 'NONE', url: "http://localhost:8080/${name}/", validResponseContent: "${ver}"
+		sh "wget -qO- 'http://192.168.33.110:80/jkmanager?cmd=update&from=list&w=lb&sw=tc2&vwa=0'"
+	}
+}
+node {
+	stage('3git') {
+		sh "git add *"
+		sh "git commit -m '${ver}'"
+		withCredentials([usernamePassword(credentialsId: 'git_login', passwordVariable: 'PASS', usernameVariable: 'NAME')]) {
+			sh "git push https://${NAME}:${PASS}@github.com/y6vmeq/EPAM.git task6"
+			sh "git checkout master"
+			sh "git merge task6"
+			sh "git tag ${ver}"
+			sh "git push https://${NAME}:${PASS}@github.com/y6vmeq/EPAM.git master --tags"
+		}
+	}
+}
