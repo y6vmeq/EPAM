@@ -1,6 +1,5 @@
 provider "aws" {
-  access_key                = "AKIAV3PTO7FQO45OXOXT"
-  secret_key                = "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"
+  shared_credentials_file = "%USERPROFILE%\.aws\credentials"
   region                    = "eu-west-3"
 }
 resource "aws_default_vpc" "default" {
