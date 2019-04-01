@@ -1,5 +1,5 @@
 provider "aws" {
-  shared_credentials_file = "%USERPROFILE%\.aws\credentials"
+  shared_credentials_file = "%USERPROFILE%\\.aws\\credentials"
   region                    = "eu-west-3"
 }
 resource "aws_default_vpc" "default" {
