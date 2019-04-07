@@ -1,0 +1,8 @@
+name 'm10'
+maintainer 'Aliaksandr Padrabinkin'
+maintainer_email 'y6vmeq@gmail.com'
+license 'All Rights Reserved'
+description 'Installs/Configures m10'
+long_description 'Installs/Configures m10'
+depends 'docker'
+version '1.1.1'

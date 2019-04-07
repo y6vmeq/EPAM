@@ -1,0 +1,39 @@
+def old_ver = ''
+node {
+	stage('1.Get_branch') {
+		git branch: 'task10', url: 'https://github.com/y6vmeq/EPAM.git'
+		sh "git config --global user.email 'y6vmeq@gmail.com'"
+		sh "git config --global user.name 'y6vmeq'"
+		sh "chmod -R 777 ${env.WORKSPACE}/Module10"
+	}
+
+	stage('2.Write_new_tag'){
+		Properties prs = new Properties()
+		File pr_fl = new File("${env.WORKSPACE}/Module10/m10/metadata.rb")
+		prs.load(pr_fl.newDataInputStream())
+		old_ver = prs.getProperty("version")
+		old_ver = old_ver.replaceAll(/'/, "")
+		sh script: "sed -i 's/${old_ver}/${VER}/g' ${env.WORKSPACE}/Module10/m10/attributes/default.rb"
+		sh script: "sed -i 's/${old_ver}/${VER}/g' ${env.WORKSPACE}/Module10/m10/metadata.rb"
+	}
+	stage('3.Push_cookbook_env'){
+		sh "knife cookbook upload m10 -o ${env.WORKSPACE}/Module10/ -c /home/vagrant/chef-repo/.chef/knife.rb"
+	}
+	stage('4.Write_environment'){
+		sh script: "knife environment show ${ENV} -F json -c /home/vagrant/chef-repo/.chef/knife.rb > ${env.WORKSPACE}/Module10/m10/${ENV}.json"
+		sh script: "sed -i 's/${old_ver}/${VER}/g' ${env.WORKSPACE}/Module10/m10/${ENV}.json"
+		sh script: "knife environment from file ${env.WORKSPACE}/Module10/m10/${ENV}.json -c /home/vagrant/chef-repo/.chef/knife.rb"
+	}
+	stage('5.Start_Chef-client'){
+		withCredentials([usernamePassword(credentialsId: 'vagrant_login', passwordVariable: 'PASS', usernameVariable: 'NAME')]) {
+			sh "knife ssh 'chef_environment:${ENV}' 'sudo chef-client' -x ${NAME} -P ${PASS} -c /home/vagrant/chef-repo/.chef/knife.rb"
+		}
+	}
+	stage('6.Push_Git') {
+		sh "git add *"
+		sh "git commit -m 'new version from Jenkins'"
+		withCredentials([usernamePassword(credentialsId: 'git_login', passwordVariable: 'PASS', usernameVariable: 'NAME')]) {
+			sh "git push https://${NAME}:${PASS}@github.com/y6vmeq/EPAM.git HEAD:task10"
+		}
+	}
+}

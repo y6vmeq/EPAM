@@ -1,0 +1,15 @@
+{
+  "name": "example_m10",
+  "description": "",
+  "cookbook_versions": {
+    "m10": "~> 1.1.1"
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  }
+}
