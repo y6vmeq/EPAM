@@ -1,0 +1,3 @@
+I, [2019-04-03T22:06:31.567080 #6308]  INFO -- Kitchen: -----> Starting Kitchen (v1.24.0)
+I, [2019-04-03T22:06:39.226449 #6308]  INFO -- Kitchen: -----> Verifying <default-bento-centos-76>...
+I, [2019-04-03T22:06:42.199965 #6308]  INFO -- Kitchen: -----> Kitchen is finished. (0m10.63s)

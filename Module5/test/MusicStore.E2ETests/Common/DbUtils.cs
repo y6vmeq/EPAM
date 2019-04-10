@@ -30,7 +30,7 @@ namespace E2ETests
             try
             {
                 logger.LogInformation("Trying to drop database '{0}'", databaseName);
-                using (var conn = new SqlConnection(CreateConnectionString("Music")))
+                using (var conn = new SqlConnection(CreateConnectionString("master")))
                 {
                     conn.Open();
 

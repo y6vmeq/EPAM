@@ -1,0 +1,565 @@
+I, [2019-03-31T00:20:27.292249 #6412]  INFO -- default-centos-75: -----> Cleaning up any prior instances of <default-centos-75>
+I, [2019-03-31T00:20:27.293432 #6412]  INFO -- default-centos-75: -----> Destroying <default-centos-75>...
+I, [2019-03-31T00:20:27.295862 #6412]  INFO -- default-centos-75: Finished destroying <default-centos-75> (0m0.00s).
+I, [2019-03-31T00:20:27.297041 #6412]  INFO -- default-centos-75: -----> Testing <default-centos-75>
+I, [2019-03-31T00:20:27.297890 #6412]  INFO -- default-centos-75: -----> Creating <default-centos-75>...
+I, [2019-03-31T00:20:29.584205 #6412]  INFO -- default-centos-75: Bringing machine 'default' up with 'virtualbox' provider...
+I, [2019-03-31T00:20:31.364004 #6412]  INFO -- default-centos-75: ==> default: Checking if box 'bento/centos-7.5' version '201808.24.0' is up to date...
+I, [2019-03-31T00:20:34.267620 #6412]  INFO -- default-centos-75: ==> default: Fixed port collision for 22 => 2222. Now on port 2202.
+I, [2019-03-31T00:20:34.589308 #6412]  INFO -- default-centos-75: ==> default: Clearing any previously set network interfaces...
+I, [2019-03-31T00:20:34.643126 #6412]  INFO -- default-centos-75: ==> default: Preparing network interfaces based on configuration...
+I, [2019-03-31T00:20:34.643379 #6412]  INFO -- default-centos-75:     default: Adapter 1: nat
+I, [2019-03-31T00:20:34.699616 #6412]  INFO -- default-centos-75: ==> default: Forwarding ports...
+I, [2019-03-31T00:20:34.785480 #6412]  INFO -- default-centos-75:     default: 22 (guest) => 2202 (host) (adapter 1)
+I, [2019-03-31T00:20:34.935861 #6412]  INFO -- default-centos-75: ==> default: Running 'pre-boot' VM customizations...
+I, [2019-03-31T00:20:34.991560 #6412]  INFO -- default-centos-75: ==> default: Booting VM...
+I, [2019-03-31T00:20:38.916376 #6412]  INFO -- default-centos-75: ==> default: Waiting for machine to boot. This may take a few minutes...
+I, [2019-03-31T00:20:39.349270 #6412]  INFO -- default-centos-75:     default: SSH address: 127.0.0.1:2202
+I, [2019-03-31T00:20:39.349365 #6412]  INFO -- default-centos-75:     default: SSH username: vagrant
+I, [2019-03-31T00:20:39.349416 #6412]  INFO -- default-centos-75:     default: SSH auth method: private key
+I, [2019-03-31T00:20:54.669693 #6412]  INFO -- default-centos-75:     default: Warning: Connection reset. Retrying...
+I, [2019-03-31T00:20:55.230672 #6412]  INFO -- default-centos-75:     default: Warning: Connection aborted. Retrying...
+I, [2019-03-31T00:20:55.834585 #6412]  INFO -- default-centos-75:     default: Warning: Remote connection disconnect. Retrying...
+I, [2019-03-31T00:20:59.274010 #6412]  INFO -- default-centos-75:     default: 
+I, [2019-03-31T00:20:59.274274 #6412]  INFO -- default-centos-75:     default: Vagrant insecure key detected. Vagrant will automatically replace
+I, [2019-03-31T00:20:59.274529 #6412]  INFO -- default-centos-75:     default: this with a newly generated keypair for better security.
+I, [2019-03-31T00:21:02.008970 #6412]  INFO -- default-centos-75:     default: 
+I, [2019-03-31T00:21:02.009071 #6412]  INFO -- default-centos-75:     default: Inserting generated public key within guest...
+I, [2019-03-31T00:21:02.739812 #6412]  INFO -- default-centos-75:     default: Removing insecure key from the guest if it's present...
+I, [2019-03-31T00:21:03.083183 #6412]  INFO -- default-centos-75:     default: Key inserted! Disconnecting and reconnecting using new SSH key...
+I, [2019-03-31T00:21:03.920416 #6412]  INFO -- default-centos-75: ==> default: Machine booted and ready!
+I, [2019-03-31T00:21:03.920566 #6412]  INFO -- default-centos-75: ==> default: Checking for guest additions in VM...
+I, [2019-03-31T00:21:03.975021 #6412]  INFO -- default-centos-75:     default: The guest additions on this VM do not match the installed version of
+I, [2019-03-31T00:21:03.975268 #6412]  INFO -- default-centos-75:     default: VirtualBox! In most cases this is fine, but in rare cases it can
+I, [2019-03-31T00:21:03.975482 #6412]  INFO -- default-centos-75:     default: prevent things such as shared folders from working properly. If you see
+I, [2019-03-31T00:21:03.975696 #6412]  INFO -- default-centos-75:     default: shared folder errors, please make sure the guest additions within the
+I, [2019-03-31T00:21:03.975981 #6412]  INFO -- default-centos-75:     default: virtual machine match the version of VirtualBox you have installed on
+I, [2019-03-31T00:21:03.976198 #6412]  INFO -- default-centos-75:     default: your host and reload your VM.
+I, [2019-03-31T00:21:03.976416 #6412]  INFO -- default-centos-75:     default: 
+I, [2019-03-31T00:21:03.976631 #6412]  INFO -- default-centos-75:     default: Guest Additions Version: 5.2.18
+I, [2019-03-31T00:21:03.976848 #6412]  INFO -- default-centos-75:     default: VirtualBox Version: 6.0
+I, [2019-03-31T00:21:03.977063 #6412]  INFO -- default-centos-75: ==> default: Setting hostname...
+I, [2019-03-31T00:21:05.276764 #6412]  INFO -- default-centos-75: ==> default: Mounting shared folders...
+I, [2019-03-31T00:21:05.277797 #6412]  INFO -- default-centos-75:     default: /tmp/omnibus/cache => C:/Users/Administrator/.kitchen/cache
+I, [2019-03-31T00:21:06.215391 #6412]  INFO -- default-centos-75: ==> default: Machine not provisioned because `--no-provision` is specified.
+I, [2019-03-31T00:21:09.890379 #6412]  INFO -- default-centos-75: [SSH] Established
+I, [2019-03-31T00:21:09.891379 #6412]  INFO -- default-centos-75: Vagrant instance <default-centos-75> created.
+I, [2019-03-31T00:21:09.894017 #6412]  INFO -- default-centos-75: Finished creating <default-centos-75> (0m42.59s).
+I, [2019-03-31T00:21:09.894720 #6412]  INFO -- default-centos-75: -----> Converging <default-centos-75>...
+I, [2019-03-31T00:21:09.897600 #6412]  INFO -- default-centos-75: Preparing files for transfer
+I, [2019-03-31T00:21:09.898026 #6412]  INFO -- default-centos-75: Preparing dna.json
+I, [2019-03-31T00:21:09.899828 #6412]  INFO -- default-centos-75: Resolving cookbook dependencies with Berkshelf 7.0.7...
+I, [2019-03-31T00:21:15.443325 #6412]  INFO -- default-centos-75: Removing non-cookbook files before transfer
+I, [2019-03-31T00:21:15.490829 #6412]  INFO -- default-centos-75: Preparing validation.pem
+I, [2019-03-31T00:21:15.495314 #6412]  INFO -- default-centos-75: Preparing client.rb
+I, [2019-03-31T00:21:15.575700 #6412]  INFO -- default-centos-75: -----> Installing Chef Omnibus (install only if missing)
+I, [2019-03-31T00:21:15.587462 #6412]  INFO -- default-centos-75: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2019-03-31T00:21:15.588020 #6412]  INFO -- default-centos-75: Trying wget...
+I, [2019-03-31T00:21:16.069900 #6412]  INFO -- default-centos-75: Download complete.
+I, [2019-03-31T00:21:16.102129 #6412]  INFO -- default-centos-75: el 7 x86_64
+I, [2019-03-31T00:21:16.102269 #6412]  INFO -- default-centos-75: Getting information for chef stable  for el...
+I, [2019-03-31T00:21:16.102348 #6412]  INFO -- default-centos-75: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=el&pv=7&m=x86_64
+I, [2019-03-31T00:21:16.102423 #6412]  INFO -- default-centos-75:   to file /tmp/install.sh.2998/metadata.txt
+I, [2019-03-31T00:21:16.105033 #6412]  INFO -- default-centos-75: trying wget...
+I, [2019-03-31T00:21:17.193763 #6412]  INFO -- default-centos-75: sha1	8861da401e22eec58fe1565b314968fff73e03a9
+I, [2019-03-31T00:21:17.193869 #6412]  INFO -- default-centos-75: sha256	633f211df89e1483341afb35230a29589e1a51e0f5f91fea5594a90d734a8c78
+I, [2019-03-31T00:21:17.193926 #6412]  INFO -- default-centos-75: url	https://packages.chef.io/files/stable/chef/14.11.21/el/7/chef-14.11.21-1.el7.x86_64.rpm
+I, [2019-03-31T00:21:17.193975 #6412]  INFO -- default-centos-75: version	14.11.21
+I, [2019-03-31T00:21:17.196225 #6412]  INFO -- default-centos-75: downloaded metadata file looks valid...
+I, [2019-03-31T00:21:17.218134 #6412]  INFO -- default-centos-75: /tmp/omnibus/cache/chef-14.11.21-1.el7.x86_64.rpm exists
+I, [2019-03-31T00:21:17.218241 #6412]  INFO -- default-centos-75: Comparing checksum with sha256sum...
+I, [2019-03-31T00:21:17.477792 #6412]  INFO -- default-centos-75: 
+I, [2019-03-31T00:21:17.477899 #6412]  INFO -- default-centos-75: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2019-03-31T00:21:17.477959 #6412]  INFO -- default-centos-75: 
+I, [2019-03-31T00:21:17.478011 #6412]  INFO -- default-centos-75: You are installing an omnibus package without a version pin.  If you are installing
+I, [2019-03-31T00:21:17.478103 #6412]  INFO -- default-centos-75: on production servers via an automated process this is DANGEROUS and you will
+I, [2019-03-31T00:21:17.478263 #6412]  INFO -- default-centos-75: be upgraded without warning on new releases, even to new major releases.
+I, [2019-03-31T00:21:17.478321 #6412]  INFO -- default-centos-75: Letting the version float is only appropriate in desktop, test, development or
+I, [2019-03-31T00:21:17.478371 #6412]  INFO -- default-centos-75: CI/CD environments.
+I, [2019-03-31T00:21:17.478421 #6412]  INFO -- default-centos-75: 
+I, [2019-03-31T00:21:17.478489 #6412]  INFO -- default-centos-75: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2019-03-31T00:21:17.478583 #6412]  INFO -- default-centos-75: 
+I, [2019-03-31T00:21:17.478712 #6412]  INFO -- default-centos-75: Installing chef 
+I, [2019-03-31T00:21:17.478895 #6412]  INFO -- default-centos-75: installing with rpm...
+I, [2019-03-31T00:21:17.581269 #6412]  INFO -- default-centos-75: warning: /tmp/omnibus/cache/chef-14.11.21-1.el7.x86_64.rpm: Header V4 DSA/SHA1 Signature, key ID 83ef826a: NOKEY
+I, [2019-03-31T00:21:18.121778 #6412]  INFO -- default-centos-75: Preparing...                                                            (100%)#                                 (100%)##                                (100%)###                               (100%)####                              (100%)#####                             (100%)######                            (100%)#######                           (100%)########                          (100%)#########                         (100%)##########                        (100%)###########                       (100%)############                      (100%)#############                     (100%)##############                    (100%)###############                   (100%)################                  (100%)#################                 (100%)##################                (100%)###################               (100%)####################              (100%)#####################             (100%)######################            (100%)#######################           (100%)########################          (100%)#########################         (100%)##########################        (100%)###########################       (100%)############################      (100%)#############################     (100%)##############################    (100%)###############################   (100%)################################  (100%)################################# (100%)################################# [100%]
+I, [2019-03-31T00:21:18.145136 #6412]  INFO -- default-centos-75: Updating / installing...
+I, [2019-03-31T00:21:27.577947 #6412]  INFO -- default-centos-75:    1:chef-14.11.21-1.el7                                                (  1%)#                                 (  4%)##                                (  7%)###                               ( 10%)####                              ( 13%)#####                             ( 16%)######                            ( 19%)#######                           ( 22%)########                          ( 25%)#########                         ( 28%)##########                        ( 31%)###########                       ( 34%)############                      ( 37%)#############                     ( 40%)##############                    ( 43%)###############                   ( 46%)################                  ( 49%)#################                 ( 51%)##################                ( 54%)###################               ( 57%)####################              ( 60%)#####################             ( 63%)######################            ( 66%)#######################           ( 69%)########################          ( 72%)#########################         ( 75%)##########################        ( 78%)###########################       ( 81%)############################      ( 84%)#############################     ( 87%)##############################    ( 90%)###############################   ( 93%)################################  ( 96%)################################# ( 99%)################################# [100%]
+I, [2019-03-31T00:21:28.096495 #6412]  INFO -- default-centos-75: Thank you for installing Chef!
+I, [2019-03-31T00:21:28.174369 #6412]  INFO -- default-centos-75: Transferring files to <default-centos-75>
+I, [2019-03-31T00:21:32.139089 #6412]  INFO -- default-centos-75: Starting Chef Client, version 14.11.21
+I, [2019-03-31T00:21:33.748011 #6412]  INFO -- default-centos-75: Creating a new client identity for default-centos-75 using the validator key.
+I, [2019-03-31T00:21:33.876818 #6412]  INFO -- default-centos-75: resolving cookbooks for run list: ["module10::create"]
+I, [2019-03-31T00:21:33.962761 #6412]  INFO -- default-centos-75: Synchronizing Cookbooks:
+I, [2019-03-31T00:21:34.059364 #6412]  INFO -- default-centos-75:   - module10 (1.0.1)
+I, [2019-03-31T00:21:34.059472 #6412]  INFO -- default-centos-75:   - docker (4.9.2)
+I, [2019-03-31T00:21:34.059528 #6412]  INFO -- default-centos-75: Installing Cookbook Gems:
+I, [2019-03-31T00:21:49.419766 #6412]  INFO -- default-centos-75: Compiling Cookbooks...
+I, [2019-03-31T00:21:49.581304 #6412]  INFO -- default-centos-75: Converging 12 resources
+I, [2019-03-31T00:21:49.581410 #6412]  INFO -- default-centos-75: Recipe: module10::create
+I, [2019-03-31T00:21:49.593990 #6412]  INFO -- default-centos-75:   * docker_service[default] action create
+I, [2019-03-31T00:21:49.594097 #6412]  INFO -- default-centos-75:     * docker_installation_script[default] action create
+I, [2019-03-31T00:21:51.867409 #6412]  INFO -- default-centos-75:       * yum_package[curl] action install (up to date)
+I, [2019-03-31T00:24:25.119330 #6412]  INFO -- default-centos-75:       * execute[install docker] action run
+I, [2019-03-31T00:24:25.119511 #6412]  INFO -- default-centos-75:  - execute curl -sSL https://get.docker.com/ | sh
+I, [2019-03-31T00:24:25.119595 #6412]  INFO -- default-centos-75:     
+I, [2019-03-31T00:24:25.119667 #6412]  INFO -- default-centos-75:     * docker_service[default] action restart
+I, [2019-03-31T00:24:25.132920 #6412]  INFO -- default-centos-75:       * docker_service_manager_systemd[default] action restart
+I, [2019-03-31T00:24:25.207646 #6412]  INFO -- default-centos-75:  * service[docker] action disable (up to date)
+I, [2019-03-31T00:24:25.273023 #6412]  INFO -- default-centos-75:  * service[docker] action stop (up to date)
+I, [2019-03-31T00:24:25.680179 #6412]  INFO -- default-centos-75:  * directory[/usr/libexec/docker] action create
+I, [2019-03-31T00:24:25.680293 #6412]  INFO -- default-centos-75:    - create new directory /usr/libexec/docker
+I, [2019-03-31T00:24:25.680356 #6412]  INFO -- default-centos-75:    - change mode from '' to '0755'
+I, [2019-03-31T00:24:25.680409 #6412]  INFO -- default-centos-75:    - change owner from '' to 'root'
+I, [2019-03-31T00:24:25.726069 #6412]  INFO -- default-centos-75:    - change group from '' to 'root'
+I, [2019-03-31T00:24:25.726206 #6412]  INFO -- default-centos-75:    - restore selinux security context
+I, [2019-03-31T00:24:25.738837 #6412]  INFO -- default-centos-75:  * template[/usr/libexec/docker/docker-wait-ready] action create
+I, [2019-03-31T00:24:25.739573 #6412]  INFO -- default-centos-75:    - create new file /usr/libexec/docker/docker-wait-ready
+I, [2019-03-31T00:24:25.739693 #6412]  INFO -- default-centos-75:    - update content in file /usr/libexec/docker/docker-wait-ready from none to 64d78d
+I, [2019-03-31T00:24:25.739762 #6412]  INFO -- default-centos-75:    --- /usr/libexec/docker/docker-wait-ready	2019-03-30 21:24:24.197991449 +0000
+I, [2019-03-31T00:24:25.739820 #6412]  INFO -- default-centos-75:    +++ /usr/libexec/docker/.chef-docker-wait-ready20190330-3131-8xkuke	2019-03-30 21:24:24.197991449 +0000
+I, [2019-03-31T00:24:25.739872 #6412]  INFO -- default-centos-75:    @@ -1 +1,11 @@
+I, [2019-03-31T00:24:25.739923 #6412]  INFO -- default-centos-75:    +#!/usr/bin/env bash
+I, [2019-03-31T00:24:25.739973 #6412]  INFO -- default-centos-75:    +i=0
+I, [2019-03-31T00:24:25.740023 #6412]  INFO -- default-centos-75:    +while [ $i -lt 40 ]; do
+I, [2019-03-31T00:24:25.740073 #6412]  INFO -- default-centos-75:    +  /usr/bin/docker  ps | head -n 1 | grep ^CONTAINER > /dev/null 2>&1
+I, [2019-03-31T00:24:25.740121 #6412]  INFO -- default-centos-75:    +  [ $? -eq 0 ] && break
+I, [2019-03-31T00:24:25.740170 #6412]  INFO -- default-centos-75:    +  ((i++))
+I, [2019-03-31T00:24:25.740218 #6412]  INFO -- default-centos-75:    +  sleep 0.5
+I, [2019-03-31T00:24:25.740266 #6412]  INFO -- default-centos-75:    +done
+I, [2019-03-31T00:24:25.740314 #6412]  INFO -- default-centos-75:    +[ $i -eq 40 ] && exit 1
+I, [2019-03-31T00:24:25.747914 #6412]  INFO -- default-centos-75:    +exit 0
+I, [2019-03-31T00:24:25.748517 #6412]  INFO -- default-centos-75:    - change mode from '' to '0755'
+I, [2019-03-31T00:24:25.748637 #6412]  INFO -- default-centos-75:    - change owner from '' to 'root'
+I, [2019-03-31T00:24:25.771084 #6412]  INFO -- default-centos-75:    - change group from '' to 'root'
+I, [2019-03-31T00:24:25.771244 #6412]  INFO -- default-centos-75:    - restore selinux security context
+I, [2019-03-31T00:24:25.772818 #6412]  INFO -- default-centos-75:  * template[/lib/systemd/system/docker.socket] action create (up to date)
+I, [2019-03-31T00:24:25.794506 #6412]  INFO -- default-centos-75:  * template[/lib/systemd/system/docker.service] action create
+I, [2019-03-31T00:24:25.794670 #6412]  INFO -- default-centos-75:    - update content in file /lib/systemd/system/docker.service from 0a28c1 to 1eff05
+I, [2019-03-31T00:24:25.794797 #6412]  INFO -- default-centos-75:    --- /lib/systemd/system/docker.service	2019-03-27 18:34:42.000000000 +0000
+I, [2019-03-31T00:24:25.794927 #6412]  INFO -- default-centos-75:    +++ /lib/systemd/system/.chef-docker20190330-3131-15gzwy1.service	2019-03-30 21:24:24.253991716 +0000
+I, [2019-03-31T00:24:25.794994 #6412]  INFO -- default-centos-75:    @@ -1,47 +1,34 @@
+I, [2019-03-31T00:24:25.795054 #6412]  INFO -- default-centos-75:     [Unit]
+I, [2019-03-31T00:24:25.795111 #6412]  INFO -- default-centos-75:     Description=Docker Application Container Engine
+I, [2019-03-31T00:24:25.795164 #6412]  INFO -- default-centos-75:     Documentation=https://docs.docker.com
+I, [2019-03-31T00:24:25.795214 #6412]  INFO -- default-centos-75:    -BindsTo=containerd.service
+I, [2019-03-31T00:24:25.795265 #6412]  INFO -- default-centos-75:    -After=network-online.target firewalld.service containerd.service
+I, [2019-03-31T00:24:25.795315 #6412]  INFO -- default-centos-75:    -Wants=network-online.target
+I, [2019-03-31T00:24:25.795364 #6412]  INFO -- default-centos-75:    +After=network-online.target docker.socket firewalld.service
+I, [2019-03-31T00:24:25.795413 #6412]  INFO -- default-centos-75:     Requires=docker.socket
+I, [2019-03-31T00:24:25.795488 #6412]  INFO -- default-centos-75:    +Wants=network-online.target
+I, [2019-03-31T00:24:25.795539 #6412]  INFO -- default-centos-75:     
+I, [2019-03-31T00:24:25.795588 #6412]  INFO -- default-centos-75:     [Service]
+I, [2019-03-31T00:24:25.795636 #6412]  INFO -- default-centos-75:     Type=notify
+I, [2019-03-31T00:24:25.795686 #6412]  INFO -- default-centos-75:     # the default is not to use systemd for cgroups because the delegate issues still
+I, [2019-03-31T00:24:25.795737 #6412]  INFO -- default-centos-75:     # exists and systemd currently does not support the cgroup feature set required
+I, [2019-03-31T00:24:25.795786 #6412]  INFO -- default-centos-75:     # for containers run by docker
+I, [2019-03-31T00:24:25.795835 #6412]  INFO -- default-centos-75:    -ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+I, [2019-03-31T00:24:25.795885 #6412]  INFO -- default-centos-75:    +ExecStart=/usr/bin/dockerd -H fd://
+I, [2019-03-31T00:24:25.795933 #6412]  INFO -- default-centos-75:     ExecReload=/bin/kill -s HUP $MAINPID
+I, [2019-03-31T00:24:25.795981 #6412]  INFO -- default-centos-75:    -TimeoutSec=0
+I, [2019-03-31T00:24:25.796029 #6412]  INFO -- default-centos-75:    -RestartSec=2
+I, [2019-03-31T00:24:25.796079 #6412]  INFO -- default-centos-75:    -Restart=always
+I, [2019-03-31T00:24:25.796127 #6412]  INFO -- default-centos-75:    -
+I, [2019-03-31T00:24:25.796176 #6412]  INFO -- default-centos-75:    -# Note that StartLimit* options were moved from "Service" to "Unit" in systemd 229.
+I, [2019-03-31T00:24:25.796226 #6412]  INFO -- default-centos-75:    -# Both the old, and new location are accepted by systemd 229 and up, so using the old location
+I, [2019-03-31T00:24:25.796275 #6412]  INFO -- default-centos-75:    -# to make them work for either version of systemd.
+I, [2019-03-31T00:24:25.796325 #6412]  INFO -- default-centos-75:    -StartLimitBurst=3
+I, [2019-03-31T00:24:25.796372 #6412]  INFO -- default-centos-75:    -
+I, [2019-03-31T00:24:25.796421 #6412]  INFO -- default-centos-75:    -# Note that StartLimitInterval was renamed to StartLimitIntervalSec in systemd 230.
+I, [2019-03-31T00:24:25.796470 #6412]  INFO -- default-centos-75:    -# Both the old, and new name are accepted by systemd 230 and up, so using the old name to make
+I, [2019-03-31T00:24:25.796519 #6412]  INFO -- default-centos-75:    -# this option work for either version of systemd.
+I, [2019-03-31T00:24:25.796571 #6412]  INFO -- default-centos-75:    -StartLimitInterval=60s
+I, [2019-03-31T00:24:25.796621 #6412]  INFO -- default-centos-75:    -
+I, [2019-03-31T00:24:25.796669 #6412]  INFO -- default-centos-75:    +LimitNOFILE=1048576
+I, [2019-03-31T00:24:25.796741 #6412]  INFO -- default-centos-75:     # Having non-zero Limit*s causes performance problems due to accounting overhead
+I, [2019-03-31T00:24:25.796791 #6412]  INFO -- default-centos-75:     # in the kernel. We recommend using cgroups to do container-local accounting.
+I, [2019-03-31T00:24:25.796839 #6412]  INFO -- default-centos-75:    -LimitNOFILE=infinity
+I, [2019-03-31T00:24:25.796887 #6412]  INFO -- default-centos-75:     LimitNPROC=infinity
+I, [2019-03-31T00:24:25.796935 #6412]  INFO -- default-centos-75:     LimitCORE=infinity
+I, [2019-03-31T00:24:25.796986 #6412]  INFO -- default-centos-75:    -
+I, [2019-03-31T00:24:25.797116 #6412]  INFO -- default-centos-75:    -# Comment TasksMax if your systemd version does not supports it.
+I, [2019-03-31T00:24:25.797268 #6412]  INFO -- default-centos-75:    -# Only systemd 226 and above support this option.
+I, [2019-03-31T00:24:25.797323 #6412]  INFO -- default-centos-75:    +# Uncomment TasksMax if your systemd version supports it.
+I, [2019-03-31T00:24:25.797375 #6412]  INFO -- default-centos-75:    +# Only systemd 226 and above support this version.
+I, [2019-03-31T00:24:25.797445 #6412]  INFO -- default-centos-75:     TasksMax=infinity
+I, [2019-03-31T00:24:25.797515 #6412]  INFO -- default-centos-75:    -
+I, [2019-03-31T00:24:25.797565 #6412]  INFO -- default-centos-75:    +TimeoutStartSec=0
+I, [2019-03-31T00:24:25.797616 #6412]  INFO -- default-centos-75:     # set delegate yes so that systemd does not reset the cgroups of docker containers
+I, [2019-03-31T00:24:25.797664 #6412]  INFO -- default-centos-75:     Delegate=yes
+I, [2019-03-31T00:24:25.797712 #6412]  INFO -- default-centos-75:    -
+I, [2019-03-31T00:24:25.797761 #6412]  INFO -- default-centos-75:     # kill only the docker process, not all processes in the cgroup
+I, [2019-03-31T00:24:25.797810 #6412]  INFO -- default-centos-75:     KillMode=process
+I, [2019-03-31T00:24:25.797859 #6412]  INFO -- default-centos-75:    +# restart the docker process if it exits prematurely
+I, [2019-03-31T00:24:25.797907 #6412]  INFO -- default-centos-75:    +Restart=on-failure
+I, [2019-03-31T00:24:25.797954 #6412]  INFO -- default-centos-75:    +StartLimitBurst=3
+I, [2019-03-31T00:24:25.798037 #6412]  INFO -- default-centos-75:    +StartLimitInterval=60s
+I, [2019-03-31T00:24:25.798128 #6412]  INFO -- default-centos-75:     
+I, [2019-03-31T00:24:25.798205 #6412]  INFO -- default-centos-75:     [Install]
+I, [2019-03-31T00:24:25.829010 #6412]  INFO -- default-centos-75:     WantedBy=multi-user.target
+I, [2019-03-31T00:24:25.829296 #6412]  INFO -- default-centos-75:    - restore selinux security context
+I, [2019-03-31T00:24:25.833277 #6412]  INFO -- default-centos-75:  * template[/etc/systemd/system/docker.socket] action create
+I, [2019-03-31T00:24:25.833495 #6412]  INFO -- default-centos-75:    - create new file /etc/systemd/system/docker.socket
+I, [2019-03-31T00:24:25.833618 #6412]  INFO -- default-centos-75:    - update content in file /etc/systemd/system/docker.socket from none to a64128
+I, [2019-03-31T00:24:25.833685 #6412]  INFO -- default-centos-75:    --- /etc/systemd/system/docker.socket	2019-03-30 21:24:24.289991888 +0000
+I, [2019-03-31T00:24:25.833742 #6412]  INFO -- default-centos-75:    +++ /etc/systemd/system/.chef-docker20190330-3131-1wzv98u.socket	2019-03-30 21:24:24.288991883 +0000
+I, [2019-03-31T00:24:25.833795 #6412]  INFO -- default-centos-75:    @@ -1 +1,12 @@
+I, [2019-03-31T00:24:25.833846 #6412]  INFO -- default-centos-75:    +[Unit]
+I, [2019-03-31T00:24:25.833897 #6412]  INFO -- default-centos-75:    +Description=Docker Socket for the API
+I, [2019-03-31T00:24:25.833946 #6412]  INFO -- default-centos-75:    +PartOf=docker.service
+I, [2019-03-31T00:24:25.833995 #6412]  INFO -- default-centos-75:    +
+I, [2019-03-31T00:24:25.834046 #6412]  INFO -- default-centos-75:    +[Socket]
+I, [2019-03-31T00:24:25.834103 #6412]  INFO -- default-centos-75:    +ListenStream=/var/run/docker.sock
+I, [2019-03-31T00:24:25.834164 #6412]  INFO -- default-centos-75:    +SocketGroup=docker
+I, [2019-03-31T00:24:25.834226 #6412]  INFO -- default-centos-75:    +
+I, [2019-03-31T00:24:25.834277 #6412]  INFO -- default-centos-75:    +
+I, [2019-03-31T00:24:25.834326 #6412]  INFO -- default-centos-75:    +[Install]
+I, [2019-03-31T00:24:25.834374 #6412]  INFO -- default-centos-75:    +WantedBy=sockets.target
+I, [2019-03-31T00:24:25.834422 #6412]  INFO -- default-centos-75:    - change mode from '' to '0644'
+I, [2019-03-31T00:24:25.834497 #6412]  INFO -- default-centos-75:    - change owner from '' to 'root'
+I, [2019-03-31T00:24:25.855903 #6412]  INFO -- default-centos-75:    - change group from '' to 'root'
+I, [2019-03-31T00:24:25.856017 #6412]  INFO -- default-centos-75:    - restore selinux security context
+I, [2019-03-31T00:24:25.867670 #6412]  INFO -- default-centos-75:  * template[/etc/systemd/system/docker.service] action create
+I, [2019-03-31T00:24:25.867837 #6412]  INFO -- default-centos-75:    - create new file /etc/systemd/system/docker.service
+I, [2019-03-31T00:24:25.867911 #6412]  INFO -- default-centos-75:    - update content in file /etc/systemd/system/docker.service from none to 64e2a7
+I, [2019-03-31T00:24:25.867967 #6412]  INFO -- default-centos-75:    --- /etc/systemd/system/docker.service	2019-03-30 21:24:24.329992078 +0000
+I, [2019-03-31T00:24:25.868022 #6412]  INFO -- default-centos-75:    +++ /etc/systemd/system/.chef-docker20190330-3131-mb0jw7.service	2019-03-30 21:24:24.328992074 +0000
+I, [2019-03-31T00:24:25.868072 #6412]  INFO -- default-centos-75:    @@ -1 +1,29 @@
+I, [2019-03-31T00:24:25.868122 #6412]  INFO -- default-centos-75:    +[Unit]
+I, [2019-03-31T00:24:25.868176 #6412]  INFO -- default-centos-75:    +Description=Docker Application Container Engine
+I, [2019-03-31T00:24:25.868227 #6412]  INFO -- default-centos-75:    +Documentation=https://docs.docker.com
+I, [2019-03-31T00:24:25.868293 #6412]  INFO -- default-centos-75:    +After=network-online.target docker.socket firewalld.service
+I, [2019-03-31T00:24:25.868343 #6412]  INFO -- default-centos-75:    +Requires=docker.socket
+I, [2019-03-31T00:24:25.868391 #6412]  INFO -- default-centos-75:    +Wants=network-online.target
+I, [2019-03-31T00:24:25.868493 #6412]  INFO -- default-centos-75:    +
+I, [2019-03-31T00:24:25.868607 #6412]  INFO -- default-centos-75:    +[Service]
+I, [2019-03-31T00:24:25.868708 #6412]  INFO -- default-centos-75:    +Type=notify
+I, [2019-03-31T00:24:25.868852 #6412]  INFO -- default-centos-75:    +ExecStartPre=/sbin/sysctl -w net.ipv4.ip_forward=1
+I, [2019-03-31T00:24:25.868976 #6412]  INFO -- default-centos-75:    +ExecStartPre=/sbin/sysctl -w net.ipv6.conf.all.forwarding=1
+I, [2019-03-31T00:24:25.869047 #6412]  INFO -- default-centos-75:    +ExecStart=/usr/bin/dockerd  --group=docker --insecure-registry=localhost:5000 --pidfile=/var/run/docker.pid
+I, [2019-03-31T00:24:25.869103 #6412]  INFO -- default-centos-75:    +ExecStartPost=/usr/libexec/docker/docker-wait-ready
+I, [2019-03-31T00:24:25.869155 #6412]  INFO -- default-centos-75:    +ExecReload=/bin/kill -s HUP $MAINPID
+I, [2019-03-31T00:24:25.869205 #6412]  INFO -- default-centos-75:    +LimitNOFILE=1048576
+I, [2019-03-31T00:24:25.869255 #6412]  INFO -- default-centos-75:    +LimitNPROC=infinity
+I, [2019-03-31T00:24:25.869303 #6412]  INFO -- default-centos-75:    +LimitCORE=infinity
+I, [2019-03-31T00:24:25.869351 #6412]  INFO -- default-centos-75:    +TasksMax=infinity
+I, [2019-03-31T00:24:25.869400 #6412]  INFO -- default-centos-75:    +TimeoutStartSec=0
+I, [2019-03-31T00:24:25.869447 #6412]  INFO -- default-centos-75:    +Delegate=yes
+I, [2019-03-31T00:24:25.869496 #6412]  INFO -- default-centos-75:    +KillMode=process
+I, [2019-03-31T00:24:25.869544 #6412]  INFO -- default-centos-75:    +Restart=always
+I, [2019-03-31T00:24:25.869592 #6412]  INFO -- default-centos-75:    +StartLimitBurst=3
+I, [2019-03-31T00:24:25.869701 #6412]  INFO -- default-centos-75:    +StartLimitInterval=60s
+I, [2019-03-31T00:24:25.869758 #6412]  INFO -- default-centos-75:    +
+I, [2019-03-31T00:24:25.869808 #6412]  INFO -- default-centos-75:    +
+I, [2019-03-31T00:24:25.869857 #6412]  INFO -- default-centos-75:    +[Install]
+I, [2019-03-31T00:24:25.869908 #6412]  INFO -- default-centos-75:    +WantedBy=multi-user.target
+I, [2019-03-31T00:24:25.869957 #6412]  INFO -- default-centos-75:    - change mode from '' to '0644'
+I, [2019-03-31T00:24:25.870005 #6412]  INFO -- default-centos-75:    - change owner from '' to 'root'
+I, [2019-03-31T00:24:25.898979 #6412]  INFO -- default-centos-75:    - change group from '' to 'root'
+I, [2019-03-31T00:24:25.899654 #6412]  INFO -- default-centos-75:    - restore selinux security context
+I, [2019-03-31T00:24:26.011065 #6412]  INFO -- default-centos-75:  * execute[systemctl daemon-reload] action run
+I, [2019-03-31T00:24:26.011182 #6412]  INFO -- default-centos-75:    - execute /bin/systemctl daemon-reload
+I, [2019-03-31T00:24:26.045211 #6412]  INFO -- default-centos-75:  * execute[systemctl try-restart docker] action run
+I, [2019-03-31T00:24:26.045327 #6412]  INFO -- default-centos-75:    - execute /bin/systemctl try-restart docker
+I, [2019-03-31T00:24:26.045391 #6412]  INFO -- default-centos-75:  * execute[systemctl daemon-reload] action nothing (skipped due to action :nothing)
+I, [2019-03-31T00:24:26.045446 #6412]  INFO -- default-centos-75:  * execute[systemctl try-restart docker] action nothing (skipped due to action :nothing)
+I, [2019-03-31T00:24:26.210346 #6412]  INFO -- default-centos-75:  * service[docker] action enable
+I, [2019-03-31T00:24:26.210578 #6412]  INFO -- default-centos-75:    - enable service service[docker]
+I, [2019-03-31T00:24:27.310240 #6412]  INFO -- default-centos-75:  * service[docker] action start
+I, [2019-03-31T00:24:27.310351 #6412]  INFO -- default-centos-75:    - start service service[docker]
+I, [2019-03-31T00:24:27.310408 #6412]  INFO -- default-centos-75:       
+I, [2019-03-31T00:24:27.310456 #6412]  INFO -- default-centos-75:     
+I, [2019-03-31T00:24:27.310501 #6412]  INFO -- default-centos-75:   
+I, [2019-03-31T00:24:27.314408 #6412]  INFO -- default-centos-75:   * docker_service[default] action start
+I, [2019-03-31T00:24:27.712075 #6412]  INFO -- default-centos-75:     * docker_service_manager_systemd[default] action start
+I, [2019-03-31T00:24:27.712181 #6412]  INFO -- default-centos-75:       * directory[/usr/libexec/docker] action create (up to date)
+I, [2019-03-31T00:24:27.723816 #6412]  INFO -- default-centos-75:       * template[/usr/libexec/docker/docker-wait-ready] action create (up to date)
+I, [2019-03-31T00:24:27.734638 #6412]  INFO -- default-centos-75:       * template[/lib/systemd/system/docker.socket] action create (up to date)
+I, [2019-03-31T00:24:27.746293 #6412]  INFO -- default-centos-75:       * template[/lib/systemd/system/docker.service] action create (up to date)
+I, [2019-03-31T00:24:27.756956 #6412]  INFO -- default-centos-75:       * template[/etc/systemd/system/docker.socket] action create (up to date)
+I, [2019-03-31T00:24:27.757687 #6412]  INFO -- default-centos-75:       * template[/etc/systemd/system/docker.service] action create (up to date)
+I, [2019-03-31T00:24:27.758403 #6412]  INFO -- default-centos-75:       * execute[systemctl daemon-reload] action nothing (skipped due to action :nothing)
+I, [2019-03-31T00:24:27.758470 #6412]  INFO -- default-centos-75:       * execute[systemctl try-restart docker] action nothing (skipped due to action :nothing)
+I, [2019-03-31T00:24:27.832556 #6412]  INFO -- default-centos-75:       * service[docker] action enable (up to date)
+I, [2019-03-31T00:24:27.896640 #6412]  INFO -- default-centos-75:       * service[docker] action start (up to date)
+I, [2019-03-31T00:24:27.896771 #6412]  INFO -- default-centos-75: (up to date)
+I, [2019-03-31T00:24:27.896990 #6412]  INFO -- default-centos-75:      (up to date)
+I, [2019-03-31T00:24:39.120379 #6412]  INFO -- default-centos-75:   * docker_image[registry] action pull
+I, [2019-03-31T00:24:39.120500 #6412]  INFO -- default-centos-75:     - Pull image registry:latest
+I, [2019-03-31T00:25:26.712676 #6412]  INFO -- default-centos-75:   * docker_image[nginx] action pull
+I, [2019-03-31T00:25:26.712851 #6412]  INFO -- default-centos-75:     - Pull image nginx:latest
+I, [2019-03-31T00:28:39.803037 #6412]  INFO -- default-centos-75:   * docker_image[tomcat] action pull
+I, [2019-03-31T00:28:39.805717 #6412]  INFO -- default-centos-75:     - Pull image tomcat:latest
+I, [2019-03-31T00:28:39.975116 #6412]  INFO -- default-centos-75:   * docker_volume[rg] action create
+I, [2019-03-31T00:28:39.975259 #6412]  INFO -- default-centos-75:     - creating volume rg
+I, [2019-03-31T00:28:40.173357 #6412]  INFO -- default-centos-75:   * docker_container[registry] action run
+I, [2019-03-31T00:28:40.173766 #6412]  INFO -- default-centos-75:     - create registry
+I, [2019-03-31T00:28:40.174128 #6412]  INFO -- default-centos-75:     -   set container_name              to "registry" (default value)
+I, [2019-03-31T00:28:40.174351 #6412]  INFO -- default-centos-75:     -   set repo                        to "registry"
+I, [2019-03-31T00:28:40.174458 #6412]  INFO -- default-centos-75:     -   set tag                         to "latest" (default value)
+I, [2019-03-31T00:28:40.174684 #6412]  INFO -- default-centos-75:     -   set command                     to nil (default value)
+I, [2019-03-31T00:28:40.174801 #6412]  INFO -- default-centos-75:     -   set cap_add                     to nil (default value)
+I, [2019-03-31T00:28:40.174879 #6412]  INFO -- default-centos-75:     -   set cap_drop                    to nil (default value)
+I, [2019-03-31T00:28:40.174987 #6412]  INFO -- default-centos-75:     -   set cgroup_parent               to "" (default value)
+I, [2019-03-31T00:28:40.175061 #6412]  INFO -- default-centos-75:     -   set cpu_shares                  to 0 (default value)
+I, [2019-03-31T00:28:40.175136 #6412]  INFO -- default-centos-75:     -   set cpuset_cpus                 to "" (default value)
+I, [2019-03-31T00:28:40.175215 #6412]  INFO -- default-centos-75:     -   set devices                     to [] (default value)
+I, [2019-03-31T00:28:40.175274 #6412]  INFO -- default-centos-75:     -   set dns                         to [] (default value)
+I, [2019-03-31T00:28:40.175324 #6412]  INFO -- default-centos-75:     -   set dns_search                  to [] (default value)
+I, [2019-03-31T00:28:40.175370 #6412]  INFO -- default-centos-75:     -   set domain_name                 to "" (default value)
+I, [2019-03-31T00:28:40.175417 #6412]  INFO -- default-centos-75:     -   set entrypoint                  to nil (default value)
+I, [2019-03-31T00:28:40.175463 #6412]  INFO -- default-centos-75:     -   set env                         to [] (default value)
+I, [2019-03-31T00:28:40.175508 #6412]  INFO -- default-centos-75:     -   set extra_hosts                 to nil (default value)
+I, [2019-03-31T00:28:40.175551 #6412]  INFO -- default-centos-75:     -   set exposed_ports               to {"5000/tcp"=>{}}
+I, [2019-03-31T00:28:40.175595 #6412]  INFO -- default-centos-75:     -   set health_check                to {} (default value)
+I, [2019-03-31T00:28:40.175640 #6412]  INFO -- default-centos-75:     -   set hostname                    to nil (default value)
+I, [2019-03-31T00:28:40.176055 #6412]  INFO -- default-centos-75:     -   set ipc_mode                    to "" (default value)
+I, [2019-03-31T00:28:40.176157 #6412]  INFO -- default-centos-75:     -   set kernel_memory               to 0 (default value)
+I, [2019-03-31T00:28:40.176246 #6412]  INFO -- default-centos-75:     -   set labels                      to {} (default value)
+I, [2019-03-31T00:28:40.176315 #6412]  INFO -- default-centos-75:     -   set links                       to nil (default value)
+I, [2019-03-31T00:28:40.176397 #6412]  INFO -- default-centos-75:     -   set init                        to nil (default value)
+I, [2019-03-31T00:28:40.176446 #6412]  INFO -- default-centos-75:     -   set ip_address                  to nil (default value)
+I, [2019-03-31T00:28:40.176496 #6412]  INFO -- default-centos-75:     -   set mac_address                 to nil (default value)
+I, [2019-03-31T00:28:40.176543 #6412]  INFO -- default-centos-75:     -   set memory                      to 0 (default value)
+I, [2019-03-31T00:28:40.176588 #6412]  INFO -- default-centos-75:     -   set memory_swap                 to 0 (default value)
+I, [2019-03-31T00:28:40.176631 #6412]  INFO -- default-centos-75:     -   set memory_swappiness           to 0 (default value)
+I, [2019-03-31T00:28:40.176682 #6412]  INFO -- default-centos-75:     -   set memory_reservation          to 0 (default value)
+I, [2019-03-31T00:28:40.176728 #6412]  INFO -- default-centos-75:     -   set network_disabled            to false (default value)
+I, [2019-03-31T00:28:40.176773 #6412]  INFO -- default-centos-75:     -   set network_mode                to "bridge" (default value)
+I, [2019-03-31T00:28:40.176815 #6412]  INFO -- default-centos-75:     -   set network_aliases             to [] (default value)
+I, [2019-03-31T00:28:40.176860 #6412]  INFO -- default-centos-75:     -   set oom_kill_disable            to false (default value)
+I, [2019-03-31T00:28:40.176903 #6412]  INFO -- default-centos-75:     -   set oom_score_adj               to -500 (default value)
+I, [2019-03-31T00:28:40.176947 #6412]  INFO -- default-centos-75:     -   set outfile                     to nil (default value)
+I, [2019-03-31T00:28:40.176996 #6412]  INFO -- default-centos-75:     -   set port_bindings               to {"5000/tcp"=>[{"HostIp"=>"0.0.0.0", "HostPort"=>"5000"}]}
+I, [2019-03-31T00:28:40.177040 #6412]  INFO -- default-centos-75:     -   set pid_mode                    to "" (default value)
+I, [2019-03-31T00:28:40.177088 #6412]  INFO -- default-centos-75:     -   set privileged                  to false (default value)
+I, [2019-03-31T00:28:40.177131 #6412]  INFO -- default-centos-75:     -   set publish_all_ports           to false (default value)
+I, [2019-03-31T00:28:40.177174 #6412]  INFO -- default-centos-75:     -   set remove_volumes              to false (default value)
+I, [2019-03-31T00:28:40.177218 #6412]  INFO -- default-centos-75:     -   set restart_maximum_retry_count to 0 (default value)
+I, [2019-03-31T00:28:40.177262 #6412]  INFO -- default-centos-75:     -   set restart_policy              to nil (default value)
+I, [2019-03-31T00:28:40.177306 #6412]  INFO -- default-centos-75:     -   set runtime                     to "runc" (default value)
+I, [2019-03-31T00:28:40.177351 #6412]  INFO -- default-centos-75:     -   set ro_rootfs                   to false (default value)
+I, [2019-03-31T00:28:40.177394 #6412]  INFO -- default-centos-75:     -   set security_opt                to nil (default value)
+I, [2019-03-31T00:28:40.177438 #6412]  INFO -- default-centos-75:     -   set shm_size                    to 67108864 (default value)
+I, [2019-03-31T00:28:40.177482 #6412]  INFO -- default-centos-75:     -   set signal                      to "SIGTERM" (default value)
+I, [2019-03-31T00:28:40.177525 #6412]  INFO -- default-centos-75:     -   set sysctls                     to {} (default value)
+I, [2019-03-31T00:28:40.177568 #6412]  INFO -- default-centos-75:     -   set tty                         to false (default value)
+I, [2019-03-31T00:28:40.177611 #6412]  INFO -- default-centos-75:     -   set ulimits                     to nil (default value)
+I, [2019-03-31T00:28:40.177667 #6412]  INFO -- default-centos-75:     -   set user                        to "" (default value)
+I, [2019-03-31T00:28:40.177736 #6412]  INFO -- default-centos-75:     -   set userns_mode                 to "" (default value)
+I, [2019-03-31T00:28:40.177802 #6412]  INFO -- default-centos-75:     -   set uts_mode                    to "" (default value)
+I, [2019-03-31T00:28:40.177867 #6412]  INFO -- default-centos-75:     -   set volumes                     to {}
+I, [2019-03-31T00:28:40.177936 #6412]  INFO -- default-centos-75:     -   set volumes_from                to nil (default value)
+I, [2019-03-31T00:28:40.177988 #6412]  INFO -- default-centos-75:     -   set volume_driver               to nil (default value)
+I, [2019-03-31T00:28:40.178038 #6412]  INFO -- default-centos-75:     -   set working_dir                 to "" (default value)
+I, [2019-03-31T00:28:41.132882 #6412]  INFO -- default-centos-75:     -   set volumes_binds               to ["rg:/var/lib/registry"]
+I, [2019-03-31T00:28:41.187473 #6412]  INFO -- default-centos-75:     - starting registry
+I, [2019-03-31T00:28:41.187595 #6412]  INFO -- default-centos-75:   * directory[/etc/nginx_docker/] action create
+I, [2019-03-31T00:28:41.187655 #6412]  INFO -- default-centos-75:     - create new directory /etc/nginx_docker/
+I, [2019-03-31T00:28:41.243143 #6412]  INFO -- default-centos-75:     - change mode from '' to '0777'
+I, [2019-03-31T00:28:41.243305 #6412]  INFO -- default-centos-75:     - restore selinux security context
+I, [2019-03-31T00:28:41.244746 #6412]  INFO -- default-centos-75:   * cookbook_file[/etc/nginx_docker/green.conf] action create
+I, [2019-03-31T00:28:41.245425 #6412]  INFO -- default-centos-75:     - create new file /etc/nginx_docker/green.conf
+I, [2019-03-31T00:28:41.245566 #6412]  INFO -- default-centos-75:     - update content in file /etc/nginx_docker/green.conf from none to d9a0ca
+I, [2019-03-31T00:28:41.245675 #6412]  INFO -- default-centos-75:     --- /etc/nginx_docker/green.conf	2019-03-30 21:28:39.709876026 +0000
+I, [2019-03-31T00:28:41.245731 #6412]  INFO -- default-centos-75:     +++ /etc/nginx_docker/.chef-green20190330-3131-nnjvvq.conf	2019-03-30 21:28:39.708876019 +0000
+I, [2019-03-31T00:28:41.245825 #6412]  INFO -- default-centos-75:     @@ -1 +1,14 @@
+I, [2019-03-31T00:28:41.245881 #6412]  INFO -- default-centos-75:     +server {
+I, [2019-03-31T00:28:41.245930 #6412]  INFO -- default-centos-75:     +    listen 80;
+I, [2019-03-31T00:28:41.245979 #6412]  INFO -- default-centos-75:     +    server_name localhost;
+I, [2019-03-31T00:28:41.246031 #6412]  INFO -- default-centos-75:     +
+I, [2019-03-31T00:28:41.246086 #6412]  INFO -- default-centos-75:     +    location /{
+I, [2019-03-31T00:28:41.246182 #6412]  INFO -- default-centos-75:     +    proxy_pass http://green_tom:8080/;
+I, [2019-03-31T00:28:41.246232 #6412]  INFO -- default-centos-75:     +            proxy_redirect     off;
+I, [2019-03-31T00:28:41.246285 #6412]  INFO -- default-centos-75:     +            proxy_set_header   Host             $host;
+I, [2019-03-31T00:28:41.246330 #6412]  INFO -- default-centos-75:     +            proxy_set_header   X-Real-IP        $remote_addr;
+I, [2019-03-31T00:28:41.246376 #6412]  INFO -- default-centos-75:     +            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+I, [2019-03-31T00:28:41.246420 #6412]  INFO -- default-centos-75:     +	
+I, [2019-03-31T00:28:41.246463 #6412]  INFO -- default-centos-75:     +    }
+I, [2019-03-31T00:28:41.246506 #6412]  INFO -- default-centos-75:     +}
+I, [2019-03-31T00:28:41.278313 #6412]  INFO -- default-centos-75:     - change mode from '' to '0777'
+I, [2019-03-31T00:28:41.278422 #6412]  INFO -- default-centos-75:     - restore selinux security context
+I, [2019-03-31T00:28:41.279855 #6412]  INFO -- default-centos-75:   * cookbook_file[/etc/nginx_docker/blue.na] action create
+I, [2019-03-31T00:28:41.281944 #6412]  INFO -- default-centos-75:     - create new file /etc/nginx_docker/blue.na
+I, [2019-03-31T00:28:41.282023 #6412]  INFO -- default-centos-75:     - update content in file /etc/nginx_docker/blue.na from none to 599981
+I, [2019-03-31T00:28:41.282138 #6412]  INFO -- default-centos-75:     --- /etc/nginx_docker/blue.na	2019-03-30 21:28:39.744876285 +0000
+I, [2019-03-31T00:28:41.282193 #6412]  INFO -- default-centos-75:     +++ /etc/nginx_docker/.chef-blue20190330-3131-118fbem.na	2019-03-30 21:28:39.744876285 +0000
+I, [2019-03-31T00:28:41.282244 #6412]  INFO -- default-centos-75:     @@ -1 +1,14 @@
+I, [2019-03-31T00:28:41.282300 #6412]  INFO -- default-centos-75:     +server {
+I, [2019-03-31T00:28:41.282376 #6412]  INFO -- default-centos-75:     +    listen 80;
+I, [2019-03-31T00:28:41.282455 #6412]  INFO -- default-centos-75:     +    server_name localhost;
+I, [2019-03-31T00:28:41.282520 #6412]  INFO -- default-centos-75:     +
+I, [2019-03-31T00:28:41.282620 #6412]  INFO -- default-centos-75:     +    location /{
+I, [2019-03-31T00:28:41.282707 #6412]  INFO -- default-centos-75:     +    proxy_pass http://blue_tom:8080/;
+I, [2019-03-31T00:28:41.282757 #6412]  INFO -- default-centos-75:     +            proxy_redirect     off;
+I, [2019-03-31T00:28:41.282844 #6412]  INFO -- default-centos-75:     +            proxy_set_header   Host             $host;
+I, [2019-03-31T00:28:41.282919 #6412]  INFO -- default-centos-75:     +            proxy_set_header   X-Real-IP        $remote_addr;
+I, [2019-03-31T00:28:41.282977 #6412]  INFO -- default-centos-75:     +            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+I, [2019-03-31T00:28:41.283023 #6412]  INFO -- default-centos-75:     +	
+I, [2019-03-31T00:28:41.283067 #6412]  INFO -- default-centos-75:     +    }
+I, [2019-03-31T00:28:41.283147 #6412]  INFO -- default-centos-75:     +}
+I, [2019-03-31T00:28:41.316365 #6412]  INFO -- default-centos-75:     - change mode from '' to '0777'
+I, [2019-03-31T00:28:41.316477 #6412]  INFO -- default-centos-75:     - restore selinux security context
+I, [2019-03-31T00:28:41.352425 #6412]  INFO -- default-centos-75:   * docker_container[nginx] action run
+I, [2019-03-31T00:28:41.352532 #6412]  INFO -- default-centos-75:     - create nginx
+I, [2019-03-31T00:28:41.352654 #6412]  INFO -- default-centos-75:     -   set container_name              to "nginx" (default value)
+I, [2019-03-31T00:28:41.352722 #6412]  INFO -- default-centos-75:     -   set repo                        to "nginx"
+I, [2019-03-31T00:28:41.352777 #6412]  INFO -- default-centos-75:     -   set tag                         to "latest" (default value)
+I, [2019-03-31T00:28:41.352827 #6412]  INFO -- default-centos-75:     -   set command                     to nil (default value)
+I, [2019-03-31T00:28:41.352875 #6412]  INFO -- default-centos-75:     -   set cap_add                     to nil (default value)
+I, [2019-03-31T00:28:41.352922 #6412]  INFO -- default-centos-75:     -   set cap_drop                    to nil (default value)
+I, [2019-03-31T00:28:41.352968 #6412]  INFO -- default-centos-75:     -   set cgroup_parent               to "" (default value)
+I, [2019-03-31T00:28:41.353015 #6412]  INFO -- default-centos-75:     -   set cpu_shares                  to 0 (default value)
+I, [2019-03-31T00:28:41.353064 #6412]  INFO -- default-centos-75:     -   set cpuset_cpus                 to "" (default value)
+I, [2019-03-31T00:28:41.353141 #6412]  INFO -- default-centos-75:     -   set devices                     to [] (default value)
+I, [2019-03-31T00:28:41.353193 #6412]  INFO -- default-centos-75:     -   set dns                         to [] (default value)
+I, [2019-03-31T00:28:41.353241 #6412]  INFO -- default-centos-75:     -   set dns_search                  to [] (default value)
+I, [2019-03-31T00:28:41.353286 #6412]  INFO -- default-centos-75:     -   set domain_name                 to "" (default value)
+I, [2019-03-31T00:28:41.353332 #6412]  INFO -- default-centos-75:     -   set entrypoint                  to nil (default value)
+I, [2019-03-31T00:28:41.353379 #6412]  INFO -- default-centos-75:     -   set env                         to [] (default value)
+I, [2019-03-31T00:28:41.353425 #6412]  INFO -- default-centos-75:     -   set extra_hosts                 to nil (default value)
+I, [2019-03-31T00:28:41.353472 #6412]  INFO -- default-centos-75:     -   set exposed_ports               to {"80/tcp"=>{}}
+I, [2019-03-31T00:28:41.353518 #6412]  INFO -- default-centos-75:     -   set health_check                to {} (default value)
+I, [2019-03-31T00:28:41.353563 #6412]  INFO -- default-centos-75:     -   set hostname                    to nil (default value)
+I, [2019-03-31T00:28:41.353609 #6412]  INFO -- default-centos-75:     -   set ipc_mode                    to "" (default value)
+I, [2019-03-31T00:28:41.353655 #6412]  INFO -- default-centos-75:     -   set kernel_memory               to 0 (default value)
+I, [2019-03-31T00:28:41.353705 #6412]  INFO -- default-centos-75:     -   set labels                      to {} (default value)
+I, [2019-03-31T00:28:41.353752 #6412]  INFO -- default-centos-75:     -   set links                       to nil (default value)
+I, [2019-03-31T00:28:41.353798 #6412]  INFO -- default-centos-75:     -   set init                        to nil (default value)
+I, [2019-03-31T00:28:41.353843 #6412]  INFO -- default-centos-75:     -   set ip_address                  to nil (default value)
+I, [2019-03-31T00:28:41.353888 #6412]  INFO -- default-centos-75:     -   set mac_address                 to nil (default value)
+I, [2019-03-31T00:28:41.353935 #6412]  INFO -- default-centos-75:     -   set memory                      to 0 (default value)
+I, [2019-03-31T00:28:41.353994 #6412]  INFO -- default-centos-75:     -   set memory_swap                 to 0 (default value)
+I, [2019-03-31T00:28:41.354060 #6412]  INFO -- default-centos-75:     -   set memory_swappiness           to 0 (default value)
+I, [2019-03-31T00:28:41.354199 #6412]  INFO -- default-centos-75:     -   set memory_reservation          to 0 (default value)
+I, [2019-03-31T00:28:41.354298 #6412]  INFO -- default-centos-75:     -   set network_disabled            to false (default value)
+I, [2019-03-31T00:28:41.354385 #6412]  INFO -- default-centos-75:     -   set network_mode                to "bridge" (default value)
+I, [2019-03-31T00:28:41.354465 #6412]  INFO -- default-centos-75:     -   set network_aliases             to [] (default value)
+I, [2019-03-31T00:28:41.354543 #6412]  INFO -- default-centos-75:     -   set oom_kill_disable            to false (default value)
+I, [2019-03-31T00:28:41.354615 #6412]  INFO -- default-centos-75:     -   set oom_score_adj               to -500 (default value)
+I, [2019-03-31T00:28:41.354687 #6412]  INFO -- default-centos-75:     -   set outfile                     to nil (default value)
+I, [2019-03-31T00:28:41.354761 #6412]  INFO -- default-centos-75:     -   set port_bindings               to {"80/tcp"=>[{"HostIp"=>"0.0.0.0", "HostPort"=>"80"}]}
+I, [2019-03-31T00:28:41.354827 #6412]  INFO -- default-centos-75:     -   set pid_mode                    to "" (default value)
+I, [2019-03-31T00:28:41.354897 #6412]  INFO -- default-centos-75:     -   set privileged                  to false (default value)
+I, [2019-03-31T00:28:41.354968 #6412]  INFO -- default-centos-75:     -   set publish_all_ports           to false (default value)
+I, [2019-03-31T00:28:41.355050 #6412]  INFO -- default-centos-75:     -   set remove_volumes              to false (default value)
+I, [2019-03-31T00:28:41.355120 #6412]  INFO -- default-centos-75:     -   set restart_maximum_retry_count to 0 (default value)
+I, [2019-03-31T00:28:41.355190 #6412]  INFO -- default-centos-75:     -   set restart_policy              to nil (default value)
+I, [2019-03-31T00:28:41.355308 #6412]  INFO -- default-centos-75:     -   set runtime                     to "runc" (default value)
+I, [2019-03-31T00:28:41.355375 #6412]  INFO -- default-centos-75:     -   set ro_rootfs                   to false (default value)
+I, [2019-03-31T00:28:41.355426 #6412]  INFO -- default-centos-75:     -   set security_opt                to nil (default value)
+I, [2019-03-31T00:28:41.355475 #6412]  INFO -- default-centos-75:     -   set shm_size                    to 67108864 (default value)
+I, [2019-03-31T00:28:41.355522 #6412]  INFO -- default-centos-75:     -   set signal                      to "SIGTERM" (default value)
+I, [2019-03-31T00:28:41.355569 #6412]  INFO -- default-centos-75:     -   set sysctls                     to {} (default value)
+I, [2019-03-31T00:28:41.355615 #6412]  INFO -- default-centos-75:     -   set tty                         to false (default value)
+I, [2019-03-31T00:28:41.355660 #6412]  INFO -- default-centos-75:     -   set ulimits                     to nil (default value)
+I, [2019-03-31T00:28:41.355705 #6412]  INFO -- default-centos-75:     -   set user                        to "" (default value)
+I, [2019-03-31T00:28:41.355754 #6412]  INFO -- default-centos-75:     -   set userns_mode                 to "" (default value)
+I, [2019-03-31T00:28:41.355802 #6412]  INFO -- default-centos-75:     -   set uts_mode                    to "" (default value)
+I, [2019-03-31T00:28:41.355848 #6412]  INFO -- default-centos-75:     -   set volumes                     to {} (default value)
+I, [2019-03-31T00:28:41.355893 #6412]  INFO -- default-centos-75:     -   set volumes_from                to nil (default value)
+I, [2019-03-31T00:28:41.355938 #6412]  INFO -- default-centos-75:     -   set volume_driver               to nil (default value)
+I, [2019-03-31T00:28:41.355984 #6412]  INFO -- default-centos-75:     -   set working_dir                 to "" (default value)
+I, [2019-03-31T00:28:41.992739 #6412]  INFO -- default-centos-75:     -   set volumes_binds               to nil (default value)
+I, [2019-03-31T00:28:42.036045 #6412]  INFO -- default-centos-75:     - starting nginx
+I, [2019-03-31T00:28:42.090743 #6412]  INFO -- default-centos-75:   * docker_container[green_tom] action run
+I, [2019-03-31T00:28:42.090849 #6412]  INFO -- default-centos-75:     - create green_tom
+I, [2019-03-31T00:28:42.090934 #6412]  INFO -- default-centos-75:     -   set container_name              to "green_tom" (default value)
+I, [2019-03-31T00:28:42.090989 #6412]  INFO -- default-centos-75:     -   set repo                        to "tomcat"
+I, [2019-03-31T00:28:42.091038 #6412]  INFO -- default-centos-75:     -   set tag                         to "latest" (default value)
+I, [2019-03-31T00:28:42.091087 #6412]  INFO -- default-centos-75:     -   set command                     to nil (default value)
+I, [2019-03-31T00:28:42.091134 #6412]  INFO -- default-centos-75:     -   set cap_add                     to nil (default value)
+I, [2019-03-31T00:28:42.091179 #6412]  INFO -- default-centos-75:     -   set cap_drop                    to nil (default value)
+I, [2019-03-31T00:28:42.091227 #6412]  INFO -- default-centos-75:     -   set cgroup_parent               to "" (default value)
+I, [2019-03-31T00:28:42.091272 #6412]  INFO -- default-centos-75:     -   set cpu_shares                  to 0 (default value)
+I, [2019-03-31T00:28:42.091317 #6412]  INFO -- default-centos-75:     -   set cpuset_cpus                 to "" (default value)
+I, [2019-03-31T00:28:42.091362 #6412]  INFO -- default-centos-75:     -   set devices                     to [] (default value)
+I, [2019-03-31T00:28:42.091415 #6412]  INFO -- default-centos-75:     -   set dns                         to [] (default value)
+I, [2019-03-31T00:28:42.091463 #6412]  INFO -- default-centos-75:     -   set dns_search                  to [] (default value)
+I, [2019-03-31T00:28:42.091509 #6412]  INFO -- default-centos-75:     -   set domain_name                 to "" (default value)
+I, [2019-03-31T00:28:42.091554 #6412]  INFO -- default-centos-75:     -   set entrypoint                  to nil (default value)
+I, [2019-03-31T00:28:42.091600 #6412]  INFO -- default-centos-75:     -   set env                         to [] (default value)
+I, [2019-03-31T00:28:42.091646 #6412]  INFO -- default-centos-75:     -   set extra_hosts                 to nil (default value)
+I, [2019-03-31T00:28:42.091692 #6412]  INFO -- default-centos-75:     -   set exposed_ports               to {"8080/tcp"=>{}}
+I, [2019-03-31T00:28:42.091764 #6412]  INFO -- default-centos-75:     -   set health_check                to {} (default value)
+I, [2019-03-31T00:28:42.091834 #6412]  INFO -- default-centos-75:     -   set hostname                    to nil (default value)
+I, [2019-03-31T00:28:42.091882 #6412]  INFO -- default-centos-75:     -   set ipc_mode                    to "" (default value)
+I, [2019-03-31T00:28:42.091927 #6412]  INFO -- default-centos-75:     -   set kernel_memory               to 0 (default value)
+I, [2019-03-31T00:28:42.091973 #6412]  INFO -- default-centos-75:     -   set labels                      to {} (default value)
+I, [2019-03-31T00:28:42.092018 #6412]  INFO -- default-centos-75:     -   set links                       to nil (default value)
+I, [2019-03-31T00:28:42.092074 #6412]  INFO -- default-centos-75:     -   set init                        to nil (default value)
+I, [2019-03-31T00:28:42.092122 #6412]  INFO -- default-centos-75:     -   set ip_address                  to nil (default value)
+I, [2019-03-31T00:28:42.092167 #6412]  INFO -- default-centos-75:     -   set mac_address                 to nil (default value)
+I, [2019-03-31T00:28:42.092434 #6412]  INFO -- default-centos-75:     -   set memory                      to 0 (default value)
+I, [2019-03-31T00:28:42.092543 #6412]  INFO -- default-centos-75:     -   set memory_swap                 to 0 (default value)
+I, [2019-03-31T00:28:42.092658 #6412]  INFO -- default-centos-75:     -   set memory_swappiness           to 0 (default value)
+I, [2019-03-31T00:28:42.092719 #6412]  INFO -- default-centos-75:     -   set memory_reservation          to 0 (default value)
+I, [2019-03-31T00:28:42.092770 #6412]  INFO -- default-centos-75:     -   set network_disabled            to false (default value)
+I, [2019-03-31T00:28:42.092822 #6412]  INFO -- default-centos-75:     -   set network_mode                to "bridge" (default value)
+I, [2019-03-31T00:28:42.092869 #6412]  INFO -- default-centos-75:     -   set network_aliases             to [] (default value)
+I, [2019-03-31T00:28:42.092916 #6412]  INFO -- default-centos-75:     -   set oom_kill_disable            to false (default value)
+I, [2019-03-31T00:28:42.092962 #6412]  INFO -- default-centos-75:     -   set oom_score_adj               to -500 (default value)
+I, [2019-03-31T00:28:42.093007 #6412]  INFO -- default-centos-75:     -   set outfile                     to nil (default value)
+I, [2019-03-31T00:28:42.093054 #6412]  INFO -- default-centos-75:     -   set port_bindings               to {"8080/tcp"=>[{"HostIp"=>"0.0.0.0", "HostPort"=>"8081"}]}
+I, [2019-03-31T00:28:42.093100 #6412]  INFO -- default-centos-75:     -   set pid_mode                    to "" (default value)
+I, [2019-03-31T00:28:42.093146 #6412]  INFO -- default-centos-75:     -   set privileged                  to false (default value)
+I, [2019-03-31T00:28:42.093191 #6412]  INFO -- default-centos-75:     -   set publish_all_ports           to false (default value)
+I, [2019-03-31T00:28:42.093235 #6412]  INFO -- default-centos-75:     -   set remove_volumes              to false (default value)
+I, [2019-03-31T00:28:42.093279 #6412]  INFO -- default-centos-75:     -   set restart_maximum_retry_count to 0 (default value)
+I, [2019-03-31T00:28:42.093326 #6412]  INFO -- default-centos-75:     -   set restart_policy              to nil (default value)
+I, [2019-03-31T00:28:42.093390 #6412]  INFO -- default-centos-75:     -   set runtime                     to "runc" (default value)
+I, [2019-03-31T00:28:42.093453 #6412]  INFO -- default-centos-75:     -   set ro_rootfs                   to false (default value)
+I, [2019-03-31T00:28:42.093522 #6412]  INFO -- default-centos-75:     -   set security_opt                to nil (default value)
+I, [2019-03-31T00:28:42.093588 #6412]  INFO -- default-centos-75:     -   set shm_size                    to 67108864 (default value)
+I, [2019-03-31T00:28:42.093642 #6412]  INFO -- default-centos-75:     -   set signal                      to "SIGTERM" (default value)
+I, [2019-03-31T00:28:42.093692 #6412]  INFO -- default-centos-75:     -   set sysctls                     to {} (default value)
+I, [2019-03-31T00:28:42.093740 #6412]  INFO -- default-centos-75:     -   set tty                         to false (default value)
+I, [2019-03-31T00:28:42.093785 #6412]  INFO -- default-centos-75:     -   set ulimits                     to nil (default value)
+I, [2019-03-31T00:28:42.093830 #6412]  INFO -- default-centos-75:     -   set user                        to "" (default value)
+I, [2019-03-31T00:28:42.093874 #6412]  INFO -- default-centos-75:     -   set userns_mode                 to "" (default value)
+I, [2019-03-31T00:28:42.093943 #6412]  INFO -- default-centos-75:     -   set uts_mode                    to "" (default value)
+I, [2019-03-31T00:28:42.094040 #6412]  INFO -- default-centos-75:     -   set volumes                     to {} (default value)
+I, [2019-03-31T00:28:42.094093 #6412]  INFO -- default-centos-75:     -   set volumes_from                to nil (default value)
+I, [2019-03-31T00:28:42.094138 #6412]  INFO -- default-centos-75:     -   set volume_driver               to nil (default value)
+I, [2019-03-31T00:28:42.094183 #6412]  INFO -- default-centos-75:     -   set working_dir                 to "" (default value)
+I, [2019-03-31T00:28:42.900725 #6412]  INFO -- default-centos-75:     -   set volumes_binds               to nil (default value)
+I, [2019-03-31T00:28:42.966519 #6412]  INFO -- default-centos-75:     - starting green_tom
+I, [2019-03-31T00:28:43.010862 #6412]  INFO -- default-centos-75:   * docker_tag[save_tom] action tag
+I, [2019-03-31T00:28:43.010967 #6412]  INFO -- default-centos-75:     - update tomcat:latest to localhost:5000/tomcat:1.0.2
+I, [2019-03-31T00:28:43.098990 #6412]  INFO -- default-centos-75: 
+I, [2019-03-31T00:28:43.099117 #6412]  INFO -- default-centos-75: Running handlers:
+I, [2019-03-31T00:28:43.099175 #6412]  INFO -- default-centos-75: Running handlers complete
+I, [2019-03-31T00:28:43.099225 #6412]  INFO -- default-centos-75: Chef Client finished, 25/43 resources updated in 07 minutes 10 seconds
+I, [2019-03-31T00:28:43.367059 #6412]  INFO -- default-centos-75: Downloading files from <default-centos-75>
+I, [2019-03-31T00:28:43.444201 #6412]  INFO -- default-centos-75: Finished converging <default-centos-75> (7m33.54s).
+I, [2019-03-31T00:28:43.446046 #6412]  INFO -- default-centos-75: -----> Setting up <default-centos-75>...
+I, [2019-03-31T00:28:43.449518 #6412]  INFO -- default-centos-75: Finished setting up <default-centos-75> (0m0.00s).
+I, [2019-03-31T00:28:43.453525 #6412]  INFO -- default-centos-75: -----> Verifying <default-centos-75>...
+I, [2019-03-31T00:28:45.539021 #6412]  INFO -- default-centos-75: Loaded tests from {:path=>"D:.EPAM.Results.Module10.chef-repo.cookbooks.module10.test.integration.default"} 
+E, [2019-03-31T00:28:47.699760 #6412] ERROR -- default-centos-75: Verify failed on instance <default-centos-75>.
+E, [2019-03-31T00:28:47.703053 #6412] ERROR -- default-centos-75: ------Exception-------
+E, [2019-03-31T00:28:47.703150 #6412] ERROR -- default-centos-75: Class: Kitchen::ActionFailed
+E, [2019-03-31T00:28:47.703269 #6412] ERROR -- default-centos-75: Message: InSpec Runner returns 1
+E, [2019-03-31T00:28:47.703828 #6412] ERROR -- default-centos-75: ----------------------
+E, [2019-03-31T00:28:47.704017 #6412] ERROR -- default-centos-75: ------Backtrace-------
+E, [2019-03-31T00:28:47.704086 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/kitchen-inspec-1.0.1/lib/kitchen/verifier/inspec.rb:98:in `call'
+E, [2019-03-31T00:28:47.704145 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:458:in `block in verify_action'
+E, [2019-03-31T00:28:47.704220 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:551:in `synchronize_or_call'
+E, [2019-03-31T00:28:47.704764 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:513:in `block in action'
+E, [2019-03-31T00:28:47.704837 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2019-03-31T00:28:47.704897 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:512:in `action'
+E, [2019-03-31T00:28:47.704954 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:450:in `verify_action'
+E, [2019-03-31T00:28:47.705010 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:382:in `block (2 levels) in transition_to'
+E, [2019-03-31T00:28:47.705087 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/lifecycle_hooks.rb:45:in `run_with_hooks'
+E, [2019-03-31T00:28:47.705692 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:381:in `block in transition_to'
+E, [2019-03-31T00:28:47.706155 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:380:in `each'
+E, [2019-03-31T00:28:47.706238 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:380:in `transition_to'
+E, [2019-03-31T00:28:47.706296 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:162:in `verify'
+E, [2019-03-31T00:28:47.706350 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:191:in `block in test'
+E, [2019-03-31T00:28:47.706405 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/2.5.0/benchmark.rb:293:in `measure'
+E, [2019-03-31T00:28:47.706455 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/instance.rb:187:in `test'
+E, [2019-03-31T00:28:47.706510 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:197:in `public_send'
+E, [2019-03-31T00:28:47.706562 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2019-03-31T00:28:47.706613 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/test-kitchen-1.24.0/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2019-03-31T00:28:47.706666 #6412] ERROR -- default-centos-75: C:/opscode/chef-workstation/embedded/lib/ruby/gems/2.5.0/gems/logging-2.2.2/lib/logging/diagnostic_context.rb:474:in `block in create_with_logging_context'
+E, [2019-03-31T00:28:47.706715 #6412] ERROR -- default-centos-75: ----End Backtrace-----
