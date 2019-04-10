@@ -1,0 +1,88 @@
+Started by user y6vmeq
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\task5
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/y6vmeq/EPAM.git
+ > git.exe init C:\Program Files (x86)\Jenkins\workspace\task5 # timeout=10
+Fetching upstream changes from https://github.com/y6vmeq/EPAM.git
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress https://github.com/y6vmeq/EPAM.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe config remote.origin.url https://github.com/y6vmeq/EPAM.git # timeout=10
+ > git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe config remote.origin.url https://github.com/y6vmeq/EPAM.git # timeout=10
+Fetching upstream changes from https://github.com/y6vmeq/EPAM.git
+ > git.exe fetch --tags --force --progress https://github.com/y6vmeq/EPAM.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe rev-parse "refs/remotes/origin/task5^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/task5^{commit}" # timeout=10
+Checking out Revision 927e246da428d57b6e6c80c3c8011dde3b045c9f (refs/remotes/origin/task5)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 927e246da428d57b6e6c80c3c8011dde3b045c9f
+Commit message: "prefinal"
+ > git.exe rev-list --no-walk 66a84de85073c960af725b45462624f224d1c516 # timeout=10
+[task5] $ cmd /c call C:\Windows\TEMP\jenkins7271684911314656059.bat
+
+C:\Program Files (x86)\Jenkins\workspace\task5>cd Module5 
+
+C:\Program Files (x86)\Jenkins\workspace\task5\Module5>dotnet publish --framework netcoreapp2.0 --output start 
+Microsoft (R) Build Engine версии 15.3.409.57025 для .NET Core
+(C) Корпор ция М йкрософт (Microsoft Corporation). Все пр в  з щищены.
+
+  MusicStore -> C:\Program Files (x86)\Jenkins\workspace\task5\Module5\samples\MusicStore\bin\Debug\netcoreapp2.0\MusicStore.dll
+  MusicStore.E2ETests -> C:\Program Files (x86)\Jenkins\workspace\task5\Module5\test\MusicStore.E2ETests\bin\Debug\netcoreapp2.0\MusicStore.E2ETests.dll
+  MusicStore.E2ETests -> C:\Program Files (x86)\Jenkins\workspace\task5\Module5\test\MusicStore.E2ETests\start\
+  MusicStore -> C:\Program Files (x86)\Jenkins\workspace\task5\Module5\samples\MusicStore\start\
+  MusicStore.Test -> C:\Program Files (x86)\Jenkins\workspace\task5\Module5\test\MusicStore.Test\bin\Debug\netcoreapp2.0\MusicStore.Test.dll
+  MusicStore.Test -> C:\Program Files (x86)\Jenkins\workspace\task5\Module5\test\MusicStore.Test\start\
+
+C:\Program Files (x86)\Jenkins\workspace\task5\Module5>octo pack start --id=MusicStore --format=Zip --version=1.1.4 --basePath=.\samples\MusicStore\start 
+Setting Zip compression level to Optimal
+Packing MusicStore version "1.1.4"...
+Saving "MusicStore.1.1.4.zip" to "C:\Program Files (x86)\Jenkins\workspace\task5\Module5"...
+Adding files from ".\samples\MusicStore\start" matching pattern "**"
+Done.
+
+C:\Program Files (x86)\Jenkins\workspace\task5\Module5>octo push --package MusicStore.1.1.4.zip --replace-existing --server http://localhost --apiKey API-YXLBF79XPQLAC4KATYDX77E1PXY 
+Octopus Deploy Command Line Tool, version 6.2.3
+
+Detected automation environment: "Jenkins"
+Space name unspecified, process will run in the default space context
+Handshaking with Octopus Server: http://localhost
+Handshake successful. Octopus version: 2019.4.2; API version: 3.0.0
+Authenticated as: y6vmeq <y6vmeq@gmail.com> 
+Pushing package: C:\Program Files (x86)\Jenkins\workspace\task5\Module5\MusicStore.1.1.4.zip...
+Requesting signature for delta compression from the server for upload of a package with id 'MusicStore' and version '1.1.4'
+Calculating delta
+The delta file (298 272 bytes) is 2,66% the size of the orginal file (11 227 617 bytes), uploading...
+Delta transfer completed
+Push successful
+
+C:\Program Files (x86)\Jenkins\workspace\task5\Module5>octo create-release --project Music --server http://localhost --apiKey API-YXLBF79XPQLAC4KATYDX77E1PXY 
+Octopus Deploy Command Line Tool, version 6.2.3
+
+Detected automation environment: "Jenkins"
+Space name unspecified, process will run in the default space context
+Handshaking with Octopus Server: http://localhost
+Handshake successful. Octopus version: 2019.4.2; API version: 3.0.0
+Authenticated as: y6vmeq <y6vmeq@gmail.com> 
+This Octopus Server supports channels
+Finding project: Music
+Automatically selecting the best channel for this release...
+Building a release plan for Channel 'Default'...
+Finding deployment process...
+Finding release template...
+The package version for some steps was not specified. Going to try and resolve those automatically...
+Finding latest package for step: Package-Test
+Selected 'MusicStore' version '1.1.4' for 'Package-Test'
+Selected the release plan for Channel 'Default' - it is a perfect match
+Using version number from release template: 0.0.19
+Release plan for Music 0.0.19
+Channel: 'Default' (this is the default channel)
+  #   Name           Version   Source             Version rules      
+  --- -------------- --------- ------------------ -------------------
+  1   Package-Test   1.1.4     Latest available   Allow any version  
+
+Creating release...
+Release 0.0.19 created successfully!
+
+C:\Program Files (x86)\Jenkins\workspace\task5\Module5>exit 0 
+Finished: SUCCESS

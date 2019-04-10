@@ -1,0 +1,18 @@
+choco install dotnetcore-sdk --version 2.0 -y
+choco install dotnetfx -y
+choco install sql-server-express -y
+choco install sql-server-management-studio -y
+
+choco install octopusdeploy -y
+choco install octopusdeploy.tentacle -y
+choco install octopustools -y
+choco install jenkins -y
+choco install git -y
+
+dotnet publish --framework netcoreapp2.0 --output start
+octo pack app --id=MusicStore --format=Zip --version=1.1.1 --basePath=.\samples\MusicStore\start
+octo push --package MusicStore.1.1.1.zip --replace-existing --server http://localhost --apiKey API-YXLBF79XPQLAC4KATYDX77E1PXY
+octo create-release --project MusicStore Project --server http://localhost --apiKey API-YXLBF79XPQLAC4KATYDX77E1PXY
+
+powershell -executionpolicy RemoteSigned -WindowStyle Hidden "start dotnet MusicStore.dll"
+write-host $(invoke-webrequest -uri "http://localhost:5000" -UseBasicParsing).statuscode
