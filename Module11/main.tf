@@ -66,7 +66,7 @@ resource "aws_lb" "TER_ALB" {
 resource "aws_autoscaling_group" "TER_ASG" {
   name = "terASG"
   min_size = 1
-  max_size = 5
+  max_size = 2
   desired_capacity          = 1
   health_check_grace_period = 300
   health_check_type         = "ELB"
